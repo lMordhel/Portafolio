@@ -1,0 +1,102 @@
+/* Estilos generales */
+:root {
+  --color-primary: #333;
+  --color-secondary: #555;
+  --color-accent: #777;
+  --color-light: #f5f5f5;
+  --color-white: #fff;
+  --font-main: 'Source Code Pro', monospace;
+  --transition: all 0.3s ease;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-main);
+  background-color: var(--color-white);
+  color: var(--color-primary);
+  line-height: 1.6;
+}
+
+a {
+  text-decoration: none;
+  color: var(--color-primary);
+  transition: var(--transition);
+}
+
+a:hover {
+  color: var(--color-accent);
+}
+
+ul {
+  list-style: none;
+}
+
+.section-title {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  text-align: center;
+  position: relative;
+  padding-bottom: 1rem;
+}
+
+.section-title::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 3px;
+  background-color: var(--color-accent);
+}
+
+section {
+  padding: 5rem 0;
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.8rem 1.5rem;
+  border: 1px solid var(--color-primary);
+  border-radius: 4px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.btn.primary {
+  background-color: var(--color-primary);
+  color: var(--color-white);
+}
+
+.btn.secondary {
+  background-color: transparent;
+  color: var(--color-primary);
+}
+
+.btn.small {
+  padding: 0.5rem 1rem;
+  font-size: 0.9rem;
+}
+
+.btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.btn.primary:hover {
+  background-color: #222;
+}
+
+.btn.secondary:hover {
+  background-color: rgba(0, 0, 0, 0.05);
+}
