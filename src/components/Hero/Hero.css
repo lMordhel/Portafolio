@@ -220,31 +220,193 @@
 }
 
 /* ── Responsive ────────────────────────────────── */
+
+/* ---------- Tablet ≤ 1024px ---------- */
 @media screen and (max-width: 1024px) {
+  .hero {
+    padding: 6rem clamp(1.25rem, 4%, 2.5rem) 3rem;
+    min-height: auto;
+  }
+
   .hero__container {
     grid-template-columns: 1fr;
-    gap: 3rem;
+    gap: 2.5rem;
+    text-align: center;
+  }
+
+  /* Put the 3D visual above the text on tablet */
+  .hero__visual {
+    order: -1;
+  }
+
+  .hero__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .hero__availability {
+    margin-bottom: 1.5rem;
   }
 
   .hero__desc {
-    max-width: 100%;
+    max-width: 540px;
   }
 
-  .hero__scene {
-    max-width: 420px;
+  .hero__actions {
+    justify-content: center;
+  }
+
+  .hero__tech-row {
+    justify-content: center;
+  }
+
+  .hero__scene,
+  .hero__scene-fallback {
+    max-width: 400px;
   }
 }
 
+/* ---------- Tablet small ≤ 768px ---------- */
+@media screen and (max-width: 768px) {
+  .hero {
+    padding: 5.5rem 1.25rem 2.5rem;
+  }
+
+  .hero__name {
+    font-size: clamp(2.6rem, 8vw, 3.8rem);
+  }
+
+  .hero__role {
+    font-size: clamp(1rem, 2.5vw, 1.3rem);
+    margin-bottom: 1.25rem;
+  }
+
+  .hero__desc {
+    font-size: 0.95rem;
+    margin-bottom: 2rem;
+    max-width: 100%;
+  }
+
+  .hero__actions {
+    margin-bottom: 2rem;
+  }
+
+  .hero__scene,
+  .hero__scene-fallback {
+    max-width: 340px;
+  }
+
+  /* Scale down ambient glow orbs to prevent overflow */
+  .hero::before {
+    width: 350px;
+    height: 350px;
+    top: -10%;
+    right: -15%;
+  }
+
+  .hero::after {
+    width: 300px;
+    height: 300px;
+    bottom: -5%;
+    left: -15%;
+  }
+}
+
+/* ---------- Mobile ≤ 640px ---------- */
 @media screen and (max-width: 640px) {
   .hero {
-    padding-top: 6rem;
+    padding: 5rem 1rem 2rem;
+  }
+
+  .hero__container {
+    gap: 2rem;
+  }
+
+  .hero__name {
+    font-size: clamp(2.2rem, 10vw, 3rem);
+  }
+
+  .hero__role {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .hero__desc {
+    font-size: 0.9rem;
+    line-height: 1.65;
+    margin-bottom: 1.75rem;
   }
 
   .hero__actions {
     flex-direction: column;
+    width: 100%;
+    max-width: 320px;
+    margin-bottom: 1.75rem;
   }
 
-  .hero__scene {
+  .hero__scene,
+  .hero__scene-fallback {
     max-width: 100%;
+  }
+
+  .hero__tech-pill {
+    font-size: 0.7rem;
+    padding: 0.25rem 0.55rem;
+  }
+}
+
+/* ---------- Small phone ≤ 480px ---------- */
+@media screen and (max-width: 480px) {
+  .hero {
+    padding: 4.5rem 0.75rem 1.5rem;
+  }
+
+  .hero__container {
+    gap: 1.5rem;
+  }
+
+  .hero__availability {
+    font-size: 0.65rem;
+    padding: 0.3rem 0.75rem;
+    margin-bottom: 1.25rem;
+  }
+
+  .hero__name {
+    font-size: clamp(1.8rem, 11vw, 2.5rem);
+    margin-bottom: 0.75rem;
+  }
+
+  .hero__role {
+    font-size: 0.9rem;
+  }
+
+  .hero__desc {
+    font-size: 0.85rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .hero__actions {
+    max-width: 100%;
+    gap: 0.75rem;
+  }
+
+  .hero__tech-row {
+    gap: 0.6rem;
+  }
+
+  .hero__tech-label {
+    font-size: 0.6rem;
+  }
+
+  .hero__tech-pill {
+    font-size: 0.65rem;
+    padding: 0.2rem 0.5rem;
+  }
+
+  /* Hide glow orbs on very small screens — performance */
+  .hero::before,
+  .hero::after {
+    display: none;
   }
 }
