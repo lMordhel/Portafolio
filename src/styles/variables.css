@@ -1,0 +1,67 @@
+/* ════════════════════════════════════════════════
+   DESIGN TOKENS — Midnight Ember v1
+   ════════════════════════════════════════════════ */
+
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400&family=Anybody:wght@400;500;600;700;800;900&family=General+Sans:wght@300;400;500;600;700&display=swap');
+
+:root {
+    /* ── Palette ─────────────────────────────────── */
+    --bg-primary: #0b0d11;
+    --bg-secondary: #101318;
+    --bg-tertiary: #161a22;
+    --bg-card: #13161d;
+    --bg-elevated: #1a1e28;
+
+    /* Accent — Ember / warm amber tones */
+    --accent: #f59e0b;
+    --accent-hover: #d97706;
+    --accent-soft: rgba(245, 158, 11, 0.12);
+    --accent-border: rgba(245, 158, 11, 0.25);
+    --accent-glow: rgba(245, 158, 11, 0.15);
+
+    /* Secondary accent — cool mint for contrast */
+    --mint: #34d399;
+    --mint-soft: rgba(52, 211, 153, 0.12);
+
+    /* Text */
+    --text-primary: #e8eaed;
+    --text-secondary: #8b919e;
+    --text-muted: #555b69;
+    --text-inverse: #0b0d11;
+
+    /* Borders */
+    --border-subtle: rgba(255, 255, 255, 0.06);
+    --border-medium: rgba(255, 255, 255, 0.1);
+    --border-accent: rgba(245, 158, 11, 0.2);
+
+    /* Shadows */
+    --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.3);
+    --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.4);
+    --shadow-lg: 0 8px 32px rgba(0, 0, 0, 0.5);
+    --shadow-glow: 0 0 40px rgba(245, 158, 11, 0.08);
+
+    /* ── Typography ──────────────────────────────── */
+    --font-heading: 'Anybody', sans-serif;
+    --font-body: 'General Sans', sans-serif;
+    --font-mono: 'Space Mono', monospace;
+
+    /* ── Radii ───────────────────────────────────── */
+    --radius-sm: 8px;
+    --radius-md: 12px;
+    --radius-lg: 20px;
+    --radius-xl: 28px;
+    --radius-full: 9999px;
+
+    /* ── Transitions ─────────────────────────────── */
+    --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+    --ease-spring: cubic-bezier(0.34, 1.56, 0.64, 1);
+    --duration-fast: 0.15s;
+    --duration-normal: 0.3s;
+    --duration-slow: 0.5s;
+
+    /* ── Layout ──────────────────────────────────── */
+    --max-width: 1120px;
+    --section-padding-y: 7rem;
+    --section-padding: 7rem 0;
+    --content-padding: 0 clamp(1.5rem, 5%, 3rem);
+}

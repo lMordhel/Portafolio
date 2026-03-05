@@ -1,0 +1,131 @@
+/* ════════════════════════════════════════════════
+   SKILLS — Midnight Ember
+   ════════════════════════════════════════════════ */
+
+.skills {
+  background: var(--bg-secondary);
+}
+
+/* ── Primary Block ─────────────────────────────── */
+.skills__primary {
+  background: var(--bg-card);
+  border: 1px solid var(--border-accent);
+  border-top: 3px solid var(--accent);
+  border-radius: var(--radius-lg);
+  padding: 2.5rem;
+  margin-bottom: 2.5rem;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Glow accent on primary block */
+.skills__primary::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 80px;
+  background: linear-gradient(180deg, var(--accent-glow), transparent);
+  pointer-events: none;
+}
+
+/* ── Secondary Grid ────────────────────────────── */
+.skills__secondary {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+}
+
+.skills__group {
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+  padding: 2rem;
+  transition:
+    border-color var(--duration-normal) ease,
+    box-shadow var(--duration-normal) ease;
+}
+
+.skills__group:hover {
+  border-color: var(--border-medium);
+  box-shadow: var(--shadow-sm);
+}
+
+/* ── Category Title ────────────────────────────── */
+.skills__cat-title {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-family: var(--font-body);
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 1.5rem;
+  position: relative;
+  z-index: 1;
+}
+
+.skills__cat-badge {
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  font-weight: 700;
+  color: var(--text-muted);
+  background: var(--bg-tertiary);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-sm);
+  padding: 0.15rem 0.45rem;
+}
+
+.skills__primary .skills__cat-badge {
+  color: var(--accent);
+  background: var(--accent-soft);
+  border-color: var(--accent-border);
+}
+
+/* ── Pills ─────────────────────────────────────── */
+.skills__pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  position: relative;
+  z-index: 1;
+}
+
+.skills__pill {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  font-weight: 400;
+  padding: 0.4rem 0.9rem;
+  background: var(--bg-tertiary);
+  color: var(--text-secondary);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-sm);
+  transition:
+    border-color var(--duration-fast) ease,
+    color var(--duration-fast) ease;
+}
+
+.skills__pill:hover {
+  border-color: var(--border-medium);
+  color: var(--text-primary);
+}
+
+.skills__pill--accent {
+  background: var(--accent-soft);
+  color: var(--accent);
+  border-color: var(--accent-border);
+  font-weight: 700;
+}
+
+.skills__pill--accent:hover {
+  background: rgba(245, 158, 11, 0.18);
+  border-color: var(--accent);
+}
+
+/* ── Responsive ────────────────────────────────── */
+@media screen and (max-width: 640px) {
+  .skills__secondary {
+    grid-template-columns: 1fr;
+  }
+}

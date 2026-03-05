@@ -1,0 +1,21 @@
+/* ════════════════════════════════════════════════
+   CARD COMPONENT — Midnight Ember
+   ════════════════════════════════════════════════ */
+
+.card {
+    background: var(--bg-card);
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-lg);
+    padding: 2.5rem;
+    box-shadow: var(--shadow-sm);
+    transition:
+        box-shadow var(--duration-normal) ease,
+        border-color var(--duration-normal) ease,
+        transform var(--duration-normal) var(--ease-out);
+}
+
+.card--hover:hover {
+    box-shadow: var(--shadow-md), var(--shadow-glow);
+    border-color: var(--border-accent);
+    transform: translateY(-4px);
+}

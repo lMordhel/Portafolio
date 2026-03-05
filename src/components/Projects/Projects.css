@@ -1,0 +1,108 @@
+/* ════════════════════════════════════════════════
+   PROJECTS SECTION — Midnight Ember
+   ════════════════════════════════════════════════ */
+
+.projects__grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+}
+
+/* ── Card ──────────────────────────────────────── */
+.projects__card {
+  display: flex;
+  flex-direction: column;
+  padding: 2.5rem;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Accent top-line on card */
+.projects__card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, var(--accent), transparent);
+  opacity: 0;
+  transition: opacity var(--duration-normal) ease;
+}
+
+.projects__card:hover::before {
+  opacity: 1;
+}
+
+.projects__body {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.projects__title {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 2rem;
+  letter-spacing: -0.02em;
+}
+
+/* ── Detail blocks ─────────────────────────────── */
+.projects__detail-group {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.projects__label {
+  display: block;
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--accent);
+  margin-bottom: 0.4rem;
+}
+
+.projects__detail p {
+  font-size: 0.92rem;
+  color: var(--text-secondary);
+  line-height: 1.65;
+}
+
+.projects__warning {
+  color: var(--accent) !important;
+  font-style: italic;
+  font-size: 0.85rem !important;
+}
+
+/* ── Tags ──────────────────────────────────────── */
+.projects__tags {
+  margin-top: auto;
+  padding-top: 2rem;
+  border-top: 1px solid var(--border-subtle);
+  margin-bottom: 2rem;
+}
+
+.projects__tags-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 0.75rem;
+}
+
+/* ── Actions ───────────────────────────────────── */
+.projects__actions {
+  display: flex;
+  gap: 1rem;
+}
+
+/* ── Responsive ────────────────────────────────── */
+@media screen and (max-width: 1024px) {
+  .projects__grid {
+    grid-template-columns: 1fr;
+  }
+}
