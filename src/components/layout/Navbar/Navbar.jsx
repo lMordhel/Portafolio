@@ -55,7 +55,7 @@ function Navbar() {
                 {/* CTA + Burger */}
                 <div className="navbar__right">
                     <a
-                        href="/cv.pdf"
+                        href="https://drive.google.com/file/d/1-I_a4P6WFu9-kdsBgGtfuLCC6vHECi6a/view?usp=sharing"
                         className="navbar__cv-btn"
                         target="_blank"
                         rel="noopener noreferrer"
